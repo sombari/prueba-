@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>Ejercicio 5</h1>
+
+<input type="text" placeholder="Introduce un array" id="array">
+<input type="button" value="presiona para numeros aleatorios" onclick="ejemplo()">
+<p><input type="button" value="Ordenar" onclick="ordenar()"></p>
+<p id="resultado"></p>
+<script>
+
+var array=[], aux=[];
+function ejemplo()
+{
+	for(i=0;i<5;i++)
+	{
+		array.push(parseInt(Math.random()*100));
+	}
+	document.getElementById("array").value=array;
+}
+
+function ordenar()
+{
+	for(j=0;j<array.length;j++)
+	{
+		for(i=0;i<array.length;i++)
+		{
+			if(array[i]>array[i+1])
+			{
+				aux=array[i];
+				array[i]=array[i+1];
+				array[i+1]=aux;
+			}
+		}
+	}
+	document.getElementById("resultado").innerHTML=array;
+}
+</script>
+</body>
+</html>

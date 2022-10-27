@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 3 y 4</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <h1>ejercicio 3 y 4</h1>
+  <p>ejercicio 3</p>
+  <input type="text" placeholder="" id="array">
+  <input type="button" value="Ejemplo" onclick="ejemplo()">
+  <p>
+  Ejercicio 4 <input type="number" placeholder="Numero a añadir" id="valor">
+  Posición del numero agregado<select id="posicion">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected="">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                      </select> 
+        <input type="button" value="Insertar" onclick="insertar()">
+  </p>
+
+  <input type="button" value="Reiniciar" onclick="reiniciar()">
+  <p id="resultado"></p>
+
+<script>
+var array=[], tmp=0;
+function ejemplo()
+{
+
+    for(i=0;i<4;i++)
+    {
+        array.push(parseInt(Math.random()*100));
+    }
+    document.getElementById("array").value=array;
+}
+function insertar()
+{
+    array=document.getElementById("array").value.split(/,/);
+    var posicion=document.getElementById("posicion").value;
+    var valor=document.getElementById("valor").value;
+
+    for(i=posicion;i<array.length;i++)
+    {
+        tmp=array[i];
+        array[i]=valor;
+        valor=tmp;
+    }
+    array[i]=valor; 
+
+    document.getElementById("resultado").innerHTML=array;
+
+}
+
+function reiniciar()
+{
+
+    location.reload();
+}
+
+</script>
+</body>

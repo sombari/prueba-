@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 7</title>
+
+</head>
+<body>
+    <h1>Ejercicio 7</h1>
+    <div>
+        <div>
+            <p> Ingresa tu busqueda.</p>
+            <select class="form-control" id="marca" name="marca" onchange='cambioMarca()'>
+                <option value="0">MARCA</option>
+                <option value="495">NISSAN</option>                        
+                <option value="505">AUDI</option>
+                <option value="477">TOYOTA</option>
+                <option value="477">CHEVROLET</option>
+                <option value="477">SUZUKI</option>
+            </p>
+
+            
+            </select>
+        </div>
+        <div class="form-group col-md-8">
+            <select class="form-control" id="modelo" name="modelo">
+                <OPTION value='0'>MODELO</OPTION>
+                <OPTION value='495'>MODELO</OPTION>
+                <OPTION value='505'>MODELO</OPTION>
+
+                <input type="button" value="Reiniciar" onclick="reiniciar()">
+            </select>
+        </div>
+    </div>
+    <script>
+        function reiniciar()
+{
+
+    location.reload();
+}
+    </script>
+  
+</body>
+</html>
